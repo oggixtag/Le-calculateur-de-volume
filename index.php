@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /**
  * le programme demande à l'utilisateur un forme geometrique à calculer : 1 cylindre;2cube;..
