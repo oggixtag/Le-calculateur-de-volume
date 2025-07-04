@@ -11,8 +11,8 @@
  *  Cube: Volume = longueur * largeur * hauteur
  *  Sphère: Volume = (4/3) * π * (rayon³) 
  */
-
-$pi = 3.14;
+define('PI', 3.14);
+//$pi = 3.14;
 $volumeTexte = "volume";
 $forme = "";
 $volumeCalcul = "";
@@ -29,7 +29,7 @@ switch ($formeGeometrique) {
         $volumeTexte = $volumeTexte . ' ' . $forme . ': ';
         $inputRayon  = (int)readline("inserez rayon ($cm): ");
         $inputHauter  = (int)readline("inserez hauter($cm): ");
-        $volumeCalcul = ($pi * ($inputRayon * $inputRayon) * $inputHauter);
+        $volumeCalcul = (PI * ($inputRayon * $inputRayon) * $inputHauter);
         $cmAl = '= ' . ($volumeCalcul / 10) . ' cl' . ' = ' . ($volumeCalcul / 100) . ' dl' . ' = ' . ($volumeCalcul / 1000) . ' l';
         echo $volumeTexte . $volumeCalcul . ' ' . $cm3 . ' ' . $cmAl;
         break;
@@ -45,7 +45,7 @@ switch ($formeGeometrique) {
         $forme = "sphère";
         $volumeTexte = $volumeTexte . ' ' . $forme . ': ';
         $inputRayon  = (int)readline("inserez rayon ($cm): ");
-        $volumeCalcul = ((4 / 3) * $pi * ($inputRayon * $inputRayon * $inputRayon));
+        $volumeCalcul = ((4 / 3) * PI * ($inputRayon * $inputRayon * $inputRayon));
         echo $volumeTexte . $volumeCalcul . ' ' . $cm3 . ' ' . $cmAl;
         break;
     default:
